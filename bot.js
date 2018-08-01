@@ -15,19 +15,23 @@ client.on('message', msg => {
   // !ping
   case 'ping':
     msg.reply('Pong');
-    break;
+  break;
 
   case 'roll':
     msg.reply('Your roll was ' + Math.floor((Math.random() * 100) + 1));
-
-    break;
+  break;
 
   case 'flip':
     msg.reply('You got ' + coinFlip());
-    break;
+  break;
 
   case 'hi squire':
-    msg.reply('Hello sir knight of TheRedGuild!')
+    msg.reply('Hello sir knight of TheRedGuild!');
+	break;
+  
+  case 'poop':
+	msg.reply('Ew sir knight');
+  break;
 }
 });
 
