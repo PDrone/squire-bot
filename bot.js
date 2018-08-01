@@ -6,9 +6,15 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
+  switch(msg.content){
+  // !ping
+  case 'ping':
+    msg.reply('Pong')
+  break;
+  
+ 
+}
 });
+
 
 client.login(process.env.token);
