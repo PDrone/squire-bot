@@ -11,6 +11,10 @@ client.on('message', msg => {
   case 'ping':
     msg.reply('Pong')
   break;
+
+  case 'roll':
+    msg.reply('Your roll was' +Math.floor((Math.random() * 100) + 1))
+
   
  
 }
