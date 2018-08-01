@@ -5,11 +5,17 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('guilmemberAdd' , member =>{
+const channel = member.guild.channels.find('name', 'member-log');
+if (!channel) return;
+channel.send('Welcome to TheRedGuild, ${member}');
+});
+
+
 function coinFlip() {
     return (Math.floor(Math.random() * 2) == 0) ? 'heads!' : 'tails!';
 }; 
  
-
 client.on('message', msg => {
   switch(msg.content.toLowerCase()){
   // !ping
@@ -32,6 +38,8 @@ client.on('message', msg => {
   case 'poop':
 	msg.reply('Ew sir knight');
   break;
+
+
 }
 });
 
