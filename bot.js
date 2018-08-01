@@ -27,7 +27,7 @@ client.on('message', msg => {
     break;
 
   case 'hi squire':
-    msg.reply('Hello my sir knight of TheRedGuild!')
+    msg.reply('Hello sir knight of TheRedGuild!')
 }
 });
 
