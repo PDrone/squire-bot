@@ -63,4 +63,4 @@ bot.on('message', function (user, userID, channelID, message, evt) {
      }
 });
 
-client.login(process.env.B0T_T0KEN);
+bot.login(process.env.B0T_T0KEN);
