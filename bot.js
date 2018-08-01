@@ -8,22 +8,26 @@ client.on('ready', () => {
 function coinFlip() {
     return (Math.floor(Math.random() * 2) == 0) ? 'heads!' : 'tails!';
 }; 
+ 
 
 client.on('message', msg => {
-  switch(msg.content){
+  switch(msg.content.toLowerCase()){
   // !ping
   case 'ping':
     msg.reply('Pong');
     break;
 
   case 'roll':
-    msg.reply('Your roll was ' + Math.floor((Math.random() * 100) + 1));
+    msg.reply('Your roll was' + Math.floor((Math.random() * 100) + 1));
 
     break;
 
   case 'flip':
     msg.reply('You got ' + coinFlip());
     break;
+
+  case 'hi squire':
+    msg.reply('Hello my sir knight of TheRedGuild!')
 }
 });
 
