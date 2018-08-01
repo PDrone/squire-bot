@@ -17,7 +17,7 @@ client.on('message', msg => {
     break;
 
   case 'roll':
-    msg.reply('Your roll was' + Math.floor((Math.random() * 100) + 1));
+    msg.reply('Your roll was ' + Math.floor((Math.random() * 100) + 1));
 
     break;
 
