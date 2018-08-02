@@ -9,7 +9,9 @@ client.on('ready', () => {
 client.on("guildMemberAdd", member => {
   let guild = member.guild;
   let DMChannel = member.DMChannel;
-  DMChannel.send(`Welcome ${member.user} to TheRedGuild!!`)
+  console.log(guild)
+  console.log(DMChannel)
+  //DMChannel.send(`Welcome ${member.user} to TheRedGuild!!`)
 });
 
 function coinFlip() {
