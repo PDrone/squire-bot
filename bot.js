@@ -5,8 +5,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('guilmemberAdd' , member =>{
-const channel = member.guild.DMChannel;
+client.on('guildMemberAdd' , member =>{
+const channel = member.guild.defaultchannel;
 
 channel.send('Welcome to TheRedGuild, ${member}');
 });
