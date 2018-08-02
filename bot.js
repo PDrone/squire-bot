@@ -8,14 +8,17 @@ client.on('ready', () => {
 
 client.on("guildMemberAdd", member => {
   let guild = member.guild;
-  //let DMChannel = member.DMChannel;
-  
   member.send(`Welcome ${member.user} to TheRedGuild!!`)
 });
 
 function coinFlip() {
-    return (Math.floor(Math.random() * 2) == 0) ? 'heads!' : 'tails!';
-}; 
+  return (Math.floor(Math.random() * 2) == 0) ? 'heads!' : 'tails!';
+};
+
+function rps(){
+  var janken = ['rock', 'paper', 'scissors']
+  return janken[Math.floor(Math.random() * 3)]
+}
  
 client.on('message', msg => {
   switch(msg.content.toLowerCase()){
@@ -39,9 +42,19 @@ client.on('message', msg => {
   case 'poop':
 	  msg.reply('Ew sir knight');
   break;
+  
+  case 'janken rock':
+    msg.reply(janken());
+    if (janken() === 'paper'){
+      msg.reply('You lose sir')
+    }
+  break;  
 
 }
+  
+
 });
+
 
 
 
