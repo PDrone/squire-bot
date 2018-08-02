@@ -5,12 +5,11 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('guildMemberAdd' , member =>{
-const channel = member.guild.channels.find('name', 'member-log');
-if (!channel) return;
-channel.send(`Welcome to the server, ${member}`);
-});
 
+bot.on("guildMemberAdd", member => {
+  var guild = member.guild;
+  guild.defaultChannel.sendMessage(`Welcome ${member.user} to TheRedGuild!!`)
+});
 
 function coinFlip() {
     return (Math.floor(Math.random() * 2) == 0) ? 'heads!' : 'tails!';
