@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 
 client.on("guildMemberAdd", member => {
-  var guild = member.guild;
+  let guild = member.guild;
   guild.defaultChannel.sendMessage(`Welcome ${member.user} to TheRedGuild!!`)
 });
 
