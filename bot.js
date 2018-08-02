@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('guilmemberAdd' , member =>{
-const channel = member.guild.channels.find('general', 'member-log');
-if (!channel) return;
+const channel = member.guild.defaultChannel;
+
 channel.send('Welcome to TheRedGuild, ${member}');
 });
 
