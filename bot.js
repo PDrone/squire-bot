@@ -8,6 +8,7 @@ client.on('ready', () => {
 
 client.on("guildMemberAdd", member => {
   let guild = member.guild;
+  let DMChannel = member.DMChannel;
   DMChannel.sendMessage(`Welcome ${member.user} to TheRedGuild!!`)
 });
 
