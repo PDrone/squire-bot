@@ -44,8 +44,9 @@ client.on('message', msg => {
   break;
   
   case 'janken rock':
-    msg.reply(rps());
-    if (rps() === 'paper'){
+  var answer = rps()  
+  msg.reply(answer);
+    if (answer === 'paper'){
       msg.reply('You lose sir')
     }
   break;  
