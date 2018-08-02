@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   var guild = member.guild;
   guild.defaultChannel.sendMessage(`Welcome ${member.user} to TheRedGuild!!`)
 });
