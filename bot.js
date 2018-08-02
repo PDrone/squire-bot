@@ -42,24 +42,7 @@ client.on('message', msg => {
 }
 });
 
-if(command === "shekels"){
-  var object = (prizes[Math.floor(Math.random()*prizes.length)])
-  var shekels = Math.floor(Math.random()*99 +1 )
-  message.channel.send(`You rolled ${shekels} shekels !`)
 
-  if(shekels >= 49){
-      allowedUsers.push(message.author.id);
-  }
-}
-
-if(command === "buy"){
-  if(!allowedUsers.includes(message.author.id)){
-      return message.channel.send("You did not roll 49 or above so you cannot use this command.");
-  }
-  else{
-      message.channel.send("here " + objectStore);
-  };
-};
 
 
 client.login(process.env.token);
