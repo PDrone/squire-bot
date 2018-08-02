@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var allowedUsers = [];
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('guilmemberAdd' , member =>{
-const channel = member.guild.defaultChannel;
+const channel = member.guild.DMChannel;
 
 channel.send('Welcome to TheRedGuild, ${member}');
 });
