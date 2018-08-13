@@ -60,13 +60,13 @@ client.on('message', msg => {
   var answer = rps()  
   msg.reply(answer);
 	if (answer === 'paper'){
-	  setTimeout(msgLost, 5000);
+	  setTimeout(msgLost, 1000);
 	}
 	else if(answer === 'rock'){
-	  setTimeout(msgDraw, 5000);
+	  setTimeout(msgDraw, 1000);
 	}
 	else{
-	  setTimeout(msgWin, 5000);
+	  setTimeout(msgWin, 1000);
 	}
   break;
   
@@ -74,13 +74,13 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'scissors'){
-	  setTimeout(msgLost, 5000);
+	  setTimeout(msgLost, 1000);
 	}
 	else if(answer === 'paper'){
-	  setTimeout(msgDraw, 5000);
+	  setTimeout(msgDraw, 1000);
 	}
 	else{
-	  setTimeout(msgWin, 5000);
+	  setTimeout(msgWin, 1000);
 	}
 	break;
   
@@ -88,13 +88,13 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'paper'){
-	  setTimeout(msgLost, 5000);
+	  setTimeout(msgLost, 1000);
 	  }
 	  else if(answer === 'rock'){
-	  setTimeout(msgDraw, 5000);
+	  setTimeout(msgDraw, 1000);
 	  }
 	  else{
-	  setTimeout(msgWin, 5000);
+	  setTimeout(msgWin, 1000);
 	  }
 	  break;
 
