@@ -62,7 +62,7 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'scissors'){
-	  setInterval(msg.reply('You lose sir'), 1000);
+	  setTimeout(msg.reply('You lose sir'), 1000);
 	}
 	else if(answer === 'paper'){
 	  msg.reply('It\s a draw sir!')
