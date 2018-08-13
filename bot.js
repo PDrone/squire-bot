@@ -20,6 +20,10 @@ function rps(){
   return janken[Math.floor(Math.random() * 3)]
 }
 
+function msgLost(){
+    msg.reply("You Lose Sir");
+}
+
  
 client.on('message', msg => {
   switch(msg.content.toLowerCase()){
@@ -48,7 +52,7 @@ client.on('message', msg => {
   var answer = rps()  
   msg.reply(answer);
 	if (answer === 'paper'){
-	  msg.reply('You lose sir')
+	  setTimeout(msgLost(), 1000)
 	}
 	else if(answer === 'rock'){
 	  msg.reply('It\'s a draw sir!')
@@ -62,7 +66,7 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'scissors'){
-	  setTimeout(msg.reply('You lose sir'), 1000);
+	  (msg.reply('You lose sir'));
 	}
 	else if(answer === 'paper'){
 	  msg.reply('It\s a draw sir!')
