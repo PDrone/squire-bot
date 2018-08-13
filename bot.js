@@ -69,7 +69,7 @@ client.on('message', msg => {
     else{
       msg.reply('You win sir!')
     }
-    
+    break;
   case 'janken scissors':
   var answer = rps()
   msg.reply(answer);
@@ -82,6 +82,7 @@ client.on('message', msg => {
       else{
         msg.reply('You win sir!')
       }
+      break;
 
 }
   
