@@ -19,12 +19,7 @@ function rps(){
   var janken = ['rock', 'paper', 'scissors']
   return janken[Math.floor(Math.random() * 3)]
 }
-function timed(){
-   if(answer === 'paper'){
-	   setInterval(msg.reply())
-   }
-   return 
-}
+
  
 client.on('message', msg => {
   switch(msg.content.toLowerCase()){
