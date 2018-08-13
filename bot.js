@@ -19,70 +19,76 @@ function rps(){
   var janken = ['rock', 'paper', 'scissors']
   return janken[Math.floor(Math.random() * 3)]
 }
+function timed(){
+   if(answer === 'paper'){
+	   setInterval(msg.reply())
+   }
+   return 
+}
  
 client.on('message', msg => {
   switch(msg.content.toLowerCase()){
   // !ping
   case 'ping':
-    msg.reply('Pong');
+	msg.reply('Pong');
   break;
-
+  //roll dice
   case 'roll':
-    msg.reply('Your roll was ' + Math.floor((Math.random() * 100) + 1));
+	msg.reply('Your roll was ' + Math.floor((Math.random() * 100) + 1));
   break;
-
+	//flip coin
   case 'flip':
-    msg.reply('You got ' + coinFlip());
+	msg.reply('You got ' + coinFlip());
   break;
-
+	//Greeting
   case 'hi squire':
-    msg.reply('Hello sir knight of TheRedGuild!');
+	msg.reply('Hello sir knight of TheRedGuild!');
 	break;
-  
+	//lil joke
   case 'poop':
-	  msg.reply('Ew sir knight');
+	msg.reply('Ew sir knight');
   break;
   
   case 'janken rock':
   var answer = rps()  
   msg.reply(answer);
-    if (answer === 'paper'){
-      msg.reply('You lose sir')
-    }
-    else if(answer === 'rock'){
-      msg.reply('It\'s a Draw sir!')
-    }
-    else{
-      msg.reply('You win sir!')
-    }
+	if (answer === 'paper'){
+	  msg.reply('You lose sir')
+	}
+	else if(answer === 'rock'){
+	  msg.reply('It\'s a draw sir!')
+	}
+	else{
+	  msg.reply('You win sir!')
+	}
   break;
   
   case 'janken paper':
   var answer = rps()
   msg.reply(answer);
-    if (answer === 'scissors'){
-      msg.reply('You lose sir')
-    }
-    else if(answer === 'paper'){
-      msg.reply('It\s a Draw sir!')
-    }
-    else{
-      msg.reply('You win sir!')
-    }
-    break;
+	if (answer === 'scissors'){
+	  setInterval(msg.reply('You lose sir'));
+	}
+	else if(answer === 'paper'){
+	  msg.reply('It\s a draw sir!')
+	}
+	else{
+	  msg.reply('You win sir!')
+	}
+	break;
   case 'janken scissors':
   var answer = rps()
   msg.reply(answer);
-    if (answer === 'paper'){
-      msg.reply('You lose sir')
-      }
-      else if(answer === 'rock'){
-        msg.reply('It\s a Draw sir!')
-      }
-      else{
-        msg.reply('You win sir!')
-      }
-      break;
+	if (answer === 'paper'){
+	  msg.reply('You lose sir')
+	  }
+	  else if(answer === 'rock'){
+		msg.reply('It\s a draw sir!')
+	  }
+	  else{
+		msg.reply('You win sir!')
+	  }
+	  break;
 
 }
   
