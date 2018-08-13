@@ -69,6 +69,19 @@ client.on('message', msg => {
     else{
       msg.reply('You win sir!')
     }
+    
+  case 'janken scissors':
+  var answer = rps()
+  msg.reply(answer);
+    if (answer === 'paper'){
+      msg.reply('You lose sir')
+      }
+      else if(answer === 'rock'){
+        msg.reply('It\s a Draw sir!')
+      }
+      else{
+        msg.reply('You win sir!')
+      }
 
 }
   
