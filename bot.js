@@ -21,7 +21,15 @@ function rps(){
 }
 
 function msgLost(){
-	msg.reply("You Lose Sir");
+	msg.reply("You lose sir!");
+}
+
+function msgWin(){
+	msg.reply("You win sir!")
+}
+
+function msgDraw(){
+	msg.reply('It\'s a draw sir!')
 }
 
  
@@ -52,13 +60,13 @@ client.on('message', msg => {
   var answer = rps()  
   msg.reply(answer);
 	if (answer === 'paper'){
-	  setTimeout(msgLost, 5000)
+	  setTimeout(msgLost, 5000);
 	}
 	else if(answer === 'rock'){
-	  msg.reply('It\'s a draw sir!')
+	  setTimeout(msgDraw, 5000);
 	}
 	else{
-	  msg.reply('You win sir!')
+	  setTimeout(msgWin, 5000);
 	}
   break;
   
@@ -66,13 +74,13 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'scissors'){
-	  (msg.reply('You lose sir'));
+	  setTimeout(msgLost, 5000);
 	}
 	else if(answer === 'paper'){
-	  msg.reply('It\s a draw sir!')
+	  setTimeout(msgDraw, 5000);
 	}
 	else{
-	  msg.reply('You win sir!')
+	  setTimeout(msgWin, 5000);
 	}
 	break;
   
@@ -80,13 +88,13 @@ client.on('message', msg => {
   var answer = rps()
   msg.reply(answer);
 	if (answer === 'paper'){
-	  msg.reply('You lose sir')
+	  setTimeout(msgLost, 5000);
 	  }
 	  else if(answer === 'rock'){
-		msg.reply('It\s a draw sir!')
+	  setTimeout(msgDraw, 5000);
 	  }
 	  else{
-		msg.reply('You win sir!')
+	  setTimeout(msgWin, 5000);
 	  }
 	  break;
 
