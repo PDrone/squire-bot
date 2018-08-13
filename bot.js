@@ -52,7 +52,7 @@ client.on('message', msg => {
   var answer = rps()  
   msg.reply(answer);
 	if (answer === 'paper'){
-	  setTimeout(msgLost(), 1000)
+	  setTimeout(msgLost(), 5000)
 	}
 	else if(answer === 'rock'){
 	  msg.reply('It\'s a draw sir!')
